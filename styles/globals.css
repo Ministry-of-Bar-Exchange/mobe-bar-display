@@ -170,7 +170,8 @@ a {
   margin: 0;
 }
 
-.lineThin {
+.lineThick{
+  text-decoration: line-through;
   text-decoration-thickness: 1px !important;
 }
 

@@ -21,7 +21,7 @@ const ProductDetail = () => {
                                 </p>
                             </div>
                             <div className="d-flex justify-content-center align-items-center pt-3">
-                                <p className="pr-2 text-gray font-lg font-bolder m-0 text-decoration-line-through lineThick px-3">
+                                <p className="pr-2 text-gray font-lg font-bolder m-0  lineThick px-3">
                                     250
                                 </p>
                                 <p className="m-0 font-bold green font-lg font-bolder px-3">
@@ -53,7 +53,7 @@ const ProductDetail = () => {
                                         </p>
                                     </div>
                                     <div className="d-flex justify-content-end align-items-center pt-3">
-                                        <p className="pr-2 text-gray font-lg font-bolder m-0 text-decoration-line-through lineThick px-3">
+                                        <p className="pr-2 text-gray font-lg font-bolder m-0  lineThick px-3">
                                             250
                                         </p>
                                         <p className="m-0 font-bold green font-lg font-bolder px-3">
@@ -80,7 +80,7 @@ const ProductDetail = () => {
                                 </p>
                             </div>
                             <div className="d-flex justify-content-center align-items-center pt-3">
-                                <p className="pr-2 text-gray font-lg font-bolder m-0 text-decoration-line-through lineThick px-3">
+                                <p className="pr-2 text-gray font-lg font-bolder m-0  lineThick px-3">
                                     250
                                 </p>
                                 <p className="m-0 font-bold green font-lg font-bolder px-3">
@@ -112,7 +112,7 @@ const ProductDetail = () => {
                                         </p>
                                     </div>
                                     <div className="d-flex justify-content-end align-items-center pt-3">
-                                        <p className="pr-2 text-gray font-lg font-bolder m-0 text-decoration-line-through lineThick px-3">
+                                        <p className="pr-2 text-gray font-lg font-bolder m-0  lineThick px-3">
                                             250
                                         </p>
                                         <p className="m-0 font-bold green font-lg font-bolder px-3">
