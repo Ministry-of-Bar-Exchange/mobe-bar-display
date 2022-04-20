@@ -8,7 +8,7 @@ const ProductTable = () => {
                 <div className="productImage">
                     <img src='/static/images/beer-bottle.png' alt="bottle" className="w-100 p-3" />
                 </div>
-                <p className="text-whites font-lg mb-0 px-4 font-bold text-uppercase text-whites ">
+                <p className="text-whites font-lg mb-0 px-4 font-bolder text-uppercase text-whites ">
                     cocktails
                 </p>
             </div>

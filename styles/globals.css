@@ -121,27 +121,27 @@ a {
 
 .productBox {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 0px 10px;
 }
 
 .productBox svg {
-  font-size: 50px;
+  font-size: 55px;
 }
 
 .productName {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 26px;
   margin: 0;
 }
 
 .productPrices {
-  width: 44px;
+  width: 46px;
   border-radius: 50%;
   padding: 10px;
   background: #3d4341;
-  height: 44px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,15 +149,16 @@ a {
 }
 
 .productPrices span {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 /* product detail slider css */
 .productTitle {
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
   line-height: 40px;
+  margin-bottom: 25px;
 }
 
 .priceBox {
@@ -170,7 +171,7 @@ a {
   margin: 0;
 }
 
-.lineThick{
+.lineThick {
   text-decoration: line-through;
   text-decoration-thickness: 1px !important;
 }
@@ -248,29 +249,40 @@ table {
 }
 
 .table th {
-  padding: 35px 25px !important;
+  padding: 35px 30px !important;
   text-align: center !important;
 }
 
 .table th:first-child {
   text-align: start !important;
 }
-.borderTabledata{
+
+.borderTabledata {
   border-left: 2px solid #474747 !important;
   border-right: 2px solid #474747 !important;
 }
-.table td:first-child, .table td:last-child {
+
+.table td:first-child,
+.table td:last-child {
   border-left: none !important;
 }
 
 .table td {
   padding: 25px 30px !important;
-  /* border-left: 2px solid #474747 !important; */
+}
+
+.priceIcons {
+  margin-right: 30px;
 }
 
 /* footer */
 .footer {
   border-top: 2px solid #0e0e0e;
+}
+
+.footer a {
+  display: block;
+  cursor: pointer;
 }
 
 .footerImg {

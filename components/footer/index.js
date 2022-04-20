@@ -7,19 +7,19 @@ const Footer = () => {
             <Col md="12" className="p-2">
                 <Row className='m-0 justify-content-center'>
                     <Col lg="2">
-                        <div className="footerImg">
+                        <a className="footerImg">
                             <img src="static/images/ic_mobe.png" alt="footer logo" className="w-100" />
-                        </div>
+                        </a>
                     </Col>
                     <Col lg="2">
-                        <div>
+                        <a>
                             <img src="static/images/google-play.png" alt="footer logo" className="w-75" />
-                        </div>
+                        </a>
                     </Col>
                     <Col lg="2">
-                        <div>
-                            <img src="static/images/apple.png" alt="footer logo" className="w-75" />
-                        </div>
+                        <a>
+                            <img src="static/images/apple.png" alt="footer logo" className="w-75 " />
+                        </a>
                     </Col>
                     <Col lg="2">
                         <div className="text-whites">
