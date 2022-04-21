@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Table from './Table';
-import { productApi } from '../api/productApi';
+import { productApi } from '../../pages/api/productApi';
 
 const ProductTable = () => {
     const [data, setData] = useState()

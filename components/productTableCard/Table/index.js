@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HiArrowSmDown, HiArrowSmUp } from 'react-icons/hi';
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
-import { productApi } from '../../api/productApi';
+import { productApi } from '../../../pages/api/productApi';
 
 const Table = () => {
     const [data, setData] = useState()

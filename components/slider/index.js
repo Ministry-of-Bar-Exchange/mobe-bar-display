@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { HiArrowSmDown, HiArrowSmUp } from "react-icons/hi";
-import { productApi } from '../api/productApi';
+import { productApi } from '../../pages/api/productApi';
 
 const ProductSlider = () => {
     const [data, setData] = useState()
