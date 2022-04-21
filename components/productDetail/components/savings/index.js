@@ -5,7 +5,7 @@ import { FaHandHolding } from "react-icons/fa";
 const ProductSavings = () => {
     return (
         <div className="py-4 px-5 bg-darkgrey h-100">
-            <p className="productTitle text-uppercase text-whites">
+            <p className="productTitle text-uppercase text-whites text-center">
                 product name
             </p>
             <div className="d-flex align-items-center justify-content-center">
@@ -17,7 +17,7 @@ const ProductSavings = () => {
                                 upto
                             </span>
                         </p>
-                        <div className="font-lg font-bolder font-bold text-gray text-uppercase mb-0 d-flex flex-column align-items-end pt-3 handIconWrapper">
+                        <div className="font-lg font-bolder font-bold text-gray text-uppercase mb-0 d-flex flex-column align-items-end pt-1 handIconWrapper">
                             <HiCurrencyRupee />
                             <FaHandHolding className="handIcon font-xl" />
                         </div>

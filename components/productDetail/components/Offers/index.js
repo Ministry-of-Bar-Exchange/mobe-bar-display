@@ -3,7 +3,7 @@ import React from 'react';
 const ProductOffer = () => {
     return (
         <div className="py-4 px-5 bg-darkgrey h-100">
-            <p className="productTitle text-uppercase text-whites">
+            <p className="productTitle text-uppercase text-whites text-center">
                 product name
             </p>
             <div className="d-flex justify-content-center align-items-center px-3 py-2 priceBox">

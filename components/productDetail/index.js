@@ -8,16 +8,16 @@ const ProductDetail = () => {
         <div>
             <Col lg="12">
                 <Row>
-                    <Col lg="3">
+                    <Col md="6" lg="3">
                         <ProductOffer />
                     </Col>
-                    <Col lg="3">
+                    <Col md="6" lg="3">
                         <ProductSavings />
                     </Col>
-                    <Col lg="3">
+                    <Col md="6" lg="3">
                         <ProductOffer />
                     </Col>
-                    <Col lg="3">
+                    <Col md="6" lg="3">
                         <ProductSavings />
                     </Col>
                 </Row>

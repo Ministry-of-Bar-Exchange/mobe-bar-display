@@ -1,39 +1,18 @@
-import React from 'react';
-import { HiArrowSmDown, HiArrowSmUp} from 'react-icons/hi';
-import { BsChevronUp ,BsChevronDown } from 'react-icons/bs';
+import React, { useEffect, useState } from 'react';
+import { HiArrowSmDown, HiArrowSmUp } from 'react-icons/hi';
+import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
+import { productApi } from '../../api/productApi';
 
 const Table = () => {
-    const table = [
-        {
-            name: "cosmopolitian",
-            high: "250",
-            low: "190",
-            price: "250",
-            priceAction: 'increased'
-        },
-        {
-            name: "mojito",
-            high: "250",
-            low: "190",
-            price: "190",
-            priceAction: 'decreased'
+    const [data, setData] = useState()
 
-        },
-        {
-            name: "Rum",
-            high: "250",
-            low: "190",
-            price: "250",
-            priceAction: 'increased'
-        },
-        {
-            name: "cosmopolitian",
-            high: "250",
-            low: "190",
-            price: "250",
-            priceAction: 'increased'
-        }
-    ]
+    useEffect(() => {
+        getProducts();
+    }, [])
+
+    const getProducts = async () => {
+        productApi().then(e => setData(e?.data?.data?.getHomeData));
+    }
     return (
         <table className="table">
             <thead>
@@ -45,40 +24,46 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                {table?.map((item) => {
+                {data?.map((item) => {
                     return (
-                        <tr className={item.priceAction === "increased" ? "bg-green" : "bg-lightred"}>
-                            <td colspan="2" className="text-uppercase text-whites font-medium font-bold" >
-                                {item.name}
-                            </td>
-                            <td>
-                                <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center borderTabledata">
-                                    <BsChevronUp className="green font-md w-100" />
-                                    {item.high}
-                                </div>
-                            </td>
-                            <td>
-                                <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center">
-                                    <BsChevronDown  className="red font-md w-100" />
-                                    {item.low}
-                                </div>
-                            </td>
-                            <td className={item.priceAction === "increased" ? "bg-darkgreen" : "bg-darkred"}>
-                                <div className="d-flex align-items-center justify-content-center">
-                                    {item.priceAction === "increased" ?
-                                         <div className="priceIcons"> 
-                                            <HiArrowSmUp className="green font-xl" />
-                                        </div>
-                                        :
-                                         <div className="priceIcons"> 
-                                            <HiArrowSmDown className="red font-xl" />
-                                        </div>}
-                                    <p className="text-uppercase text-whites font-medium font-bold m-0">
-                                        {item.price}
-                                    </p>
-                                </div>
-                            </td>
-                        </tr>
+                        <>
+                            {item?.subCategory.map((items) => {
+                                return (
+                                    <tr className={item.highPrice === item.currentPrice ? "bg-lightred" : "bg-green"}>
+                                        <td colspan="2" className="text-uppercase text-whites font-medium font-bold" >
+                                            {items.subCategoryName}
+                                        </td>
+                                        <td>
+                                            <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center borderTabledata">
+                                                <BsChevronUp className="green font-md w-100" />
+                                                {items.highPrice}
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center">
+                                                <BsChevronDown className="red font-md w-100" />
+                                                {items.lowPrice}
+                                            </div>
+                                        </td>
+                                        <td className={items.highPrice === items.currentPrice ? "bg-darkgreen" : "bg-darkred"}>
+                                            <div className="d-flex align-itemss-center justify-content-center">
+                                                {items.highPrice === items.currentPrice ?
+                                                    <div className="priceIcons">
+                                                        <HiArrowSmUp className="green font-xl" />
+                                                    </div>
+                                                    :
+                                                    <div className="priceIcons">
+                                                        <HiArrowSmDown className="red font-xl" />
+                                                    </div>}
+                                                <p className="text-uppercase text-whites font-medium font-bold m-0">
+                                                    {items.currentPrice}
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </>
                     )
                 })}
             </tbody>

@@ -122,30 +122,32 @@ a {
 .productBox {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0px 10px;
 }
 
 .productBox svg {
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .productName {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  /* text-align: center; */
   margin: 0;
 }
 
 .productPrices {
-  width: 46px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   padding: 10px;
   background: #3d4341;
-  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .productPrices span {
@@ -155,7 +157,7 @@ a {
 
 /* product detail slider css */
 .productTitle {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 40px;
   margin-bottom: 25px;
@@ -268,7 +270,7 @@ table {
 }
 
 .table td {
-  padding: 25px 30px !important;
+  padding: 20px 30px !important;
 }
 
 .priceIcons {
@@ -288,4 +290,95 @@ table {
 .footerImg {
   width: 40px;
   margin: auto;
+}
+
+@media only screen and (min-width:2180px) and (max-width:3400px) {
+
+  .saveText,
+  .priceIcons svg {
+    font-size: 65px !important;
+  }
+
+  .uptoText {
+    margin-top: -42px;
+    font-size: 55px;
+  }
+
+  .rotateText {
+    font-size: 62px !important;
+  }
+
+  .handIconWrapper {
+    font-size: 60px;
+  }
+
+  .handIcon {
+    font-size: 65px;
+    margin-top: -35px;
+  }
+
+  .productTitle {
+    font-size: 45px;
+  }
+
+  .table th,
+  .table td .font-medium,
+  .borderTabledata {
+    font-size: 45px;
+  }
+
+  .table td svg {
+    font-size: 38px;
+  }
+
+  .footer .font-medium {
+    font-size: 45px;
+  }
+
+  .footerImg {
+    width: 70px;
+  }
+}
+
+@media only screen and (min-width:1800px) and (max-width:2100px) {
+
+  .saveText,
+  .priceIcons svg {
+    font-size: 50px !important;
+  }
+
+  .uptoText {
+    margin-top: -30px;
+    font-size: 36px;
+  }
+
+  .rotateText {
+    font-size: 50px !important;
+  }
+
+  .handIconWrapper {
+    margin-left: -2px;
+    padding-top: 0px !important;
+    font-size: 45px;
+  }
+
+  .handIcon {
+    font-size: 50px !important;
+    margin-top: -30px;
+  }
+
+  .productTitle {
+    font-size: 39px;
+  }
+
+  .table th,
+  .table td .font-medium,
+  .borderTabledata {
+    font-size: 30px;
+  }
+
+  .table td svg {
+    font-size: 25px;
+  }
+
 }
