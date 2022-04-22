@@ -131,7 +131,7 @@ a {
 }
 
 .productName {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 26px;
   /* text-align: center; */
@@ -276,7 +276,9 @@ table {
 .priceIcons {
   margin-right: 30px;
 }
-
+.price{
+  min-width: 80px;
+}
 /* footer */
 .footer {
   border-top: 2px solid #0e0e0e;
