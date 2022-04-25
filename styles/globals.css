@@ -245,7 +245,7 @@ table {
   background-color: #343434;
 }
 
-.table tr {
+.table tr ,.table .tabledata{
   border-bottom: 4px solid #1f1f1f;
   vertical-align: middle;
 }
@@ -279,6 +279,35 @@ table {
 .price{
   min-width: 80px;
 }
+.tabledata:last-child{
+  padding: 0px;
+}
+.table h6, .tableBody {
+  padding: 0px 25px !important;
+  text-align: center !important;
+  width:20% !important;
+  margin: 0 !important;
+}
+.table p{
+  padding: 30px 0px !important;
+  margin: 0 !important;
+}
+.table h6:first-child,.tableBody:first-child {
+  text-align: left !important;
+  width:40% !important;
+}
+ .tbHeading{
+  background-color: #343434;
+  padding: 30px;
+  border-bottom: 2px solid #1f1f1f;
+ }
+ .slick-list{
+   padding: 0 !important;
+ }
+ .slick-vertical .slick-slide{
+   border: none !important;
+ }
+
 /* footer */
 .footer {
   border-top: 2px solid #0e0e0e;
@@ -292,6 +321,12 @@ table {
 .footerImg {
   width: 40px;
   margin: auto;
+}
+/* .slick-slider{
+  width: calc(100vw - 152px) !important;
+} */
+.slick-track{
+  height: unset !important;
 }
 
 @media only screen and (min-width:2180px) and (max-width:3400px) {

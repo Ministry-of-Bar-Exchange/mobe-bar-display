@@ -8,7 +8,7 @@ import { productApi } from '../../pages/api/productApi';
 
 const Home = () => {
     const [data, setData] = useState([]);
-    const [currentCategory ,setCurrentCategory] = useState(null);
+    const [currentCategory , setCurrentCategory] = useState(null);
 
     useEffect(() => {
         getProducts();
@@ -31,7 +31,7 @@ const Home = () => {
                 <ProductDetail />
             </div>
             <div className="px-5 py-4">
-                <ProductTable category = {currentCategory} />
+                <ProductTable data={data}/>
             </div>
             <div>
                 <Footer />

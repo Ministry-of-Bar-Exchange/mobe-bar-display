@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'reactstrap';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { HiArrowSmDown, HiArrowSmUp } from "react-icons/hi";
 
 const ProductSlider = ({ collectedData }) => {
