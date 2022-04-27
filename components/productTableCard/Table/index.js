@@ -11,7 +11,7 @@ const Table = ({ subCategoryList = [] }) => {
         slidesToScroll: 1,
         vertical: true,
         autoplay: true,
-        speed: 1500,
+        speed: 2500,
         arrows: false,
         cssEase: 'linear',
         verticalSwiping: true,
@@ -28,7 +28,7 @@ const Table = ({ subCategoryList = [] }) => {
                 <Slider {...settings} >
                 {subCategoryList.map((items) => {
                     return (
-                        <div className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`}>
+                        <div className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`} key={items?.subCategoryId}>
                             <div className="text-uppercase text-whites font-medium font-bold tableBody">
                                 <p>{items.subCategoryName}</p>
                             </div>

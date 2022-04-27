@@ -2,24 +2,25 @@ import React from 'react';
 import Table from './Table';
 import Slider from "react-slick";
 
-const ProductTable = ({ data }) => {
+const ProductTable = ({ data ,setCurrentCategory}) => {
     const settings = {
         dots: false,
         fade: true,
-        infinite: false,
+        infinite: true,
         speed: 2500,
         arrows: false,
         autoplay:true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        beforeChange: (current, next) => setCurrentCategory(data[next])
       };
-
+    console.log(data,"data")
     return (
         <div>
             <Slider {...settings}>
                 {data?.map((item) => {
                     return (
-                        <div className="borders bg-lightgrey my-5">
+                        <div className="borders bg-lightgrey my-5" key={item?.subCategoryId}>
                             <div className="p-3 d-flex align-items-center tableHeader">
                                 <div className="productImage">
                                     <img src={'/static/images/beer-bottle.png'}

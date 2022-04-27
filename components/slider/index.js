@@ -6,7 +6,7 @@ import { HiArrowSmDown, HiArrowSmUp } from "react-icons/hi";
 const ProductSlider = ({ collectedData }) => {
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 3500,
         arrows: false,
         autoplay: true,
@@ -21,7 +21,7 @@ const ProductSlider = ({ collectedData }) => {
             <Slider {...settings} className="bg-grey pt-3 pb-2 slider">
                 {collectedData?.map((item) => {
                     return (
-                        <div>
+                        <div key={item?.subCategoryId}>
                             <Col md="12" lg="12">
                                 <Row className="m-0">
                                     <Col>
