@@ -14,13 +14,13 @@ const ProductTable = ({ data ,setCurrentCategory}) => {
         slidesToScroll: 1,
         beforeChange: (current, next) => setCurrentCategory(data[next])
       };
-    console.log(data,"data")
+
     return (
         <div>
             <Slider {...settings}>
                 {data?.map((item) => {
                     return (
-                        <div className="borders bg-lightgrey my-5" key={item?.subCategoryId}>
+                        <div key={item?.subCategoryId} className="borders bg-lightgrey my-5">
                             <div className="p-3 d-flex align-items-center tableHeader">
                                 <div className="productImage">
                                     <img src={'/static/images/beer-bottle.png'}
