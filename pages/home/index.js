@@ -31,7 +31,7 @@ const Home = () => {
                 <ProductDetail />
             </div>
             <div className="px-5 py-4">
-                <ProductTable data={data}/>
+                <ProductTable data={data} setCurrentCategory={setCurrentCategory} />
             </div>
             <div>
                 <Footer />
