@@ -30,19 +30,19 @@ const Table = ({ subCategoryList = [] }) => {
                     return (
                         <div className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`} key={items?.subCategoryId}>
                             <div className="text-uppercase text-whites font-medium font-bold tableBody">
-                                <p>{items.subCategoryName}</p>
+                                <p>{items?.subCategoryName}</p>
                             </div>
                             <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center borderTabledata tableBody">
                                 <BsChevronUp className="green font-md w-100" />
-                                {items.highPrice}
+                                {items?.highPrice}
                             </div>
                             <div className="text-uppercase text-whites font-medium font-bold d-flex flex-column justify-content-center text-center tableBody">
                                 <BsChevronDown className="red font-md w-100" />
-                                {items.lowPrice}
+                                {items?.lowPrice}
                             </div>
-                            <div className={`${items.highPrice === items.currentPrice ? "bg-darkgreen" : "bg-darkred"} d-flex justify-content-center tableBody `}>
-                                <div className="d-flex align-items-center justify-content-center">
-                                    {items.highPrice === items.currentPrice ?
+                            <div className={`${items?.highPrice === items?.currentPrice ? "bg-darkgreen" : "bg-darkred"} d-flex justify-content-center tableBody `}>
+                                <div className="d-flex align-items?-center justify-content-center">
+                                    {items?.highPrice === items?.currentPrice ?
                                         <div className="priceIcons">
                                             <HiArrowSmUp className="green font-xl" />
                                         </div>
@@ -51,7 +51,7 @@ const Table = ({ subCategoryList = [] }) => {
                                             <HiArrowSmDown className="red font-xl" />
                                         </div>}
                                     <p className="text-uppercase text-whites font-medium font-bold m-0 price">
-                                        {items.currentPrice}
+                                        {items?.currentPrice}
                                     </p>
                                 </div>
                             </div>

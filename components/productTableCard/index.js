@@ -2,18 +2,33 @@ import React from 'react';
 import Table from './Table';
 import Slider from "react-slick";
 
-const ProductTable = ({ data ,setCurrentCategory}) => {
+const ProductTable = ({ data, setCurrentCategory }) => {
     const settings = {
         dots: false,
         fade: true,
-        infinite: true,
+        infinite: false,
         speed: 2500,
         arrows: false,
-        autoplay:true,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        beforeChange: (current, next) => setCurrentCategory(data[next])
-      };
+        beforeChange: (current, next) => {
+            const { subCategory = [] } = data[next] || {};
+            const updatedCurrentCategory = { ...data[next] };
+            if (subCategory?.length <= 6) {
+                const subCategoryList = [];
+                const limit = 6 - subCategory?.length;
+                for (let index = 0; index < limit; index++) {
+                    const targetIndex = index < subCategory.length ? index : 0;
+                    if (subCategory[targetIndex]?.subCategoryId) {
+                        subCategoryList.push(subCategory[targetIndex]);
+                    }
+                }
+                updatedCurrentCategory.subCategory = [...subCategory, ...subCategoryList];
+            }
+            setCurrentCategory(updatedCurrentCategory);
+        }
+    };
 
     return (
         <div>

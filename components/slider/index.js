@@ -6,7 +6,7 @@ import { HiArrowSmDown, HiArrowSmUp } from "react-icons/hi";
 const ProductSlider = ({ collectedData }) => {
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 3500,
         arrows: false,
         autoplay: true,
@@ -26,18 +26,18 @@ const ProductSlider = ({ collectedData }) => {
                                 <Row className="m-0">
                                     <Col>
                                         <div className="productBox">
-                                            {item.highPrice < item.currentPrice ?
+                                            {item?.highPrice < item?.currentPrice ?
                                                 <HiArrowSmDown className="red font-xl" />
                                                 :
                                                 <HiArrowSmUp className="green font-xl" />
                                             }
                                             <div className="productPrices">
                                                 <span className={item.highPrice < item.currentPrice ? "red" : "green"}>
-                                                    {item.currentPrice}
+                                                    {item?.currentPrice}
                                                 </span>
                                             </div>
                                             <p className="productName text-uppercase text-whites">
-                                                {item.subCategoryName}
+                                                {item?.subCategoryName}
                                             </p>
                                         </div>
                                     </Col>
