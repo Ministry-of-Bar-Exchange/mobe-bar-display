@@ -4,7 +4,7 @@ import { Col, Row } from 'reactstrap';
 const Footer = () => {
     const [date, setDate] = useState(new Date());
     const [time,setTime] = useState(null)
-    let dates = date.toLocaleDateString('en-GB', {
+    let dates = date?.toLocaleDateString('en-GB', {
         day: 'numeric',
         month: 'short',
         year: 'numeric'
@@ -16,7 +16,7 @@ const Footer = () => {
         }
     }, [])
     useEffect(()=>{
-        setTime(date.toLocaleTimeString())
+        setTime(date?.toLocaleTimeString())
     },[date])
     return (
         <div className="d-flex justify-content-center align-items-center footer">

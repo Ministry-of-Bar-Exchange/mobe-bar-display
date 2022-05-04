@@ -1,9 +1,12 @@
-import React from 'react';
+import Script from 'next/script';
 import Home from './home';
-const Main = () => {
 
+const Main = () => {
     return (
-        <Home />
+        <>
+            <Script src="http://mobe-backend.herokuapp.com/socket.io/socket.io.js"></Script>
+            <Home />
+        </>
     );
 };
 

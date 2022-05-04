@@ -28,7 +28,7 @@ const Table = ({ subCategoryList = [] }) => {
                 <Slider {...settings} >
                 {subCategoryList.map((items) => {
                     return (
-                        <div className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`} key={items?.subCategoryId}>
+                        <div key={items?.subCategoryId} className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`}>
                             <div className="text-uppercase text-whites font-medium font-bold tableBody">
                                 <p>{items?.subCategoryName}</p>
                             </div>
@@ -40,8 +40,8 @@ const Table = ({ subCategoryList = [] }) => {
                                 <BsChevronDown className="red font-md w-100" />
                                 {items?.lowPrice}
                             </div>
-                            <div className={`${items?.highPrice === items?.currentPrice ? "bg-darkgreen" : "bg-darkred"} d-flex justify-content-center tableBody `}>
-                                <div className="d-flex align-items?-center justify-content-center">
+                            <div className={`${items?.highPrice === items?.currentPrice ? "bg-darkgreen" : "bg-darkred"} d-flex justify-content-center tableBody`}>
+                                <div className="d-flex align-items-center justify-content-center">
                                     {items?.highPrice === items?.currentPrice ?
                                         <div className="priceIcons">
                                             <HiArrowSmUp className="green font-xl" />

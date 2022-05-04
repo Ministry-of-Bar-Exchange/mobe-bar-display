@@ -35,7 +35,7 @@ const ProductTable = ({ data, setCurrentCategory }) => {
             <Slider {...settings}>
                 {data?.map((item) => {
                     return (
-                        <div key={item?.subCategoryId} className="borders bg-lightgrey my-5">
+                        <div key={item.subCategoryId} className="borders bg-lightgrey my-5">
                             <div className="p-3 d-flex align-items-center tableHeader">
                                 <div className="productImage">
                                     <img src={'/static/images/beer-bottle.png'}

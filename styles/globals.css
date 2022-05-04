@@ -245,7 +245,8 @@ table {
   background-color: #343434;
 }
 
-.table tr ,.table .tabledata{
+.table tr,
+.table .tabledata {
   border-bottom: 4px solid #1f1f1f;
   vertical-align: middle;
 }
@@ -276,37 +277,47 @@ table {
 .priceIcons {
   margin-right: 30px;
 }
-.price{
+
+.price {
   min-width: 80px;
 }
-.tabledata:last-child{
+
+.tabledata:last-child {
   padding: 0px;
 }
-.table h6, .tableBody {
+
+.table h6,
+.tableBody {
   padding: 0px 25px !important;
   text-align: center !important;
-  width:20% !important;
+  width: 20% !important;
   margin: 0 !important;
 }
-.table p{
+
+.table p {
   padding: 30px 0px !important;
   margin: 0 !important;
 }
-.table h6:first-child,.tableBody:first-child {
+
+.table h6:first-child,
+.tableBody:first-child {
   text-align: left !important;
-  width:40% !important;
+  width: 40% !important;
 }
- .tbHeading{
+
+.tbHeading {
   background-color: #343434;
   padding: 30px;
   border-bottom: 2px solid #1f1f1f;
- }
- .slick-list{
-   padding: 0 !important;
- }
- .slick-vertical .slick-slide{
-   border: none !important;
- }
+}
+
+.slick-list {
+  padding: 0 !important;
+}
+
+.slick-vertical .slick-slide {
+  border: none !important;
+}
 
 /* footer */
 .footer {
@@ -322,10 +333,8 @@ table {
   width: 40px;
   margin: auto;
 }
-/* .slick-slider{
-  width: calc(100vw - 152px) !important;
-} */
-.slick-track{
+
+.slick-track {
   height: unset !important;
 }
 
@@ -356,16 +365,18 @@ table {
 
   .productTitle {
     font-size: 45px;
-  }
+  } 
 
   .table th,
   .table td .font-medium,
-  .borderTabledata {
+  .borderTabledata,
+  .tableBody,
+  .price {
     font-size: 45px;
   }
 
-  .table td svg {
-    font-size: 38px;
+  .tableBody svg {
+    font-size: 30px;
   }
 
   .footer .font-medium {
@@ -410,12 +421,10 @@ table {
 
   .table th,
   .table td .font-medium,
-  .borderTabledata {
+  .borderTabledata,
+  .tableBody,
+  .price {
     font-size: 30px;
-  }
-
-  .table td svg {
-    font-size: 25px;
   }
 
 }

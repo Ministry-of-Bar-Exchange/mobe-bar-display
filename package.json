@@ -18,7 +18,8 @@
     "react-slick": "^0.29.0",
     "reactstrap": "^9.0.2",
     "slick-carousel": "^1.8.1",
-    "slick-slider": "^1.8.2"
+    "slick-slider": "^1.8.2",
+    "socket.io-client": "^2.1.1"
   },
   "devDependencies": {
     "eslint": "8.13.0",

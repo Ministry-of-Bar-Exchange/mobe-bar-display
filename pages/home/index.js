@@ -5,22 +5,35 @@ import ProductDetail from '../../components/productDetail';
 import ProductTable from '../../components/productTableCard';
 import ProductSlider from '../../components/slider';
 import { productApi } from '../../pages/api/productApi';
+import { SocketApi } from "../api/socket";
 
 const Home = () => {
     const [data, setData] = useState([]);
-    const [currentCategory , setCurrentCategory] = useState(null);
+    const [currentCategory, setCurrentCategory] = useState(null);
 
     useEffect(() => {
         getProducts();
+        socketHandler();
     }, [])
 
     useEffect(() => {
-        if(!currentCategory){
+        if (!currentCategory) {
             setCurrentCategory(data[0]);
-        }     
-    }, [data]) 
+        }
+    }, [data])
     const getProducts = async () => {
         productApi().then(e => setData(e?.data?.data?.getHomeData));
+    }
+    const socketHandler = () => {
+        const socketData = SocketApi();
+        socketData.on('connect', () => console.debug('socket connected'))
+        socketData.on('messageFromServer', data => {
+            console.log('message from server data', data);
+        });
+        socketData.on('priceVariation', data => {
+            console.log('priceVariation data', data);
+        });
+        return socketData;
     }
     return (
         <Container fluid className="p-0 bg-darks">
