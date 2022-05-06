@@ -2,7 +2,7 @@ import React from 'react';
 import Table from './Table';
 import Slider from "react-slick";
 
-const ProductTable = ({ data, setCurrentCategory }) => {
+const ProductTable = ({dataItems, setCurrentCategory }) => {
     const settings = {
         dots: false,
         fade: true,
@@ -13,8 +13,8 @@ const ProductTable = ({ data, setCurrentCategory }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         beforeChange: (current, next) => {
-            const { subCategory = [] } = data[next] || {};
-            const updatedCurrentCategory = { ...data[next] };
+            const { subCategory = [] } = dataItems[next] || {};
+            const updatedCurrentCategory = { ...dataItems[next] };
             if (subCategory?.length <= 6) {
                 const subCategoryList = [];
                 const limit = 6 - subCategory?.length;
@@ -33,7 +33,7 @@ const ProductTable = ({ data, setCurrentCategory }) => {
     return (
         <div>
             <Slider {...settings}>
-                {data?.map((item) => {
+                {dataItems?.map((item) => {
                     return (
                         <div key={item.subCategoryId} className="borders bg-lightgrey my-5">
                             <div className="p-3 d-flex align-items-center tableHeader">

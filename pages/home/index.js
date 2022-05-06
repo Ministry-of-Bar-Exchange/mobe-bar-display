@@ -8,7 +8,7 @@ import { productApi } from '../../pages/api/productApi';
 import { SocketApi } from "../api/socket";
 
 const Home = () => {
-    const [data, setData] = useState([]);
+    const [dataItems, setDataItems] = useState([]);
     const [currentCategory, setCurrentCategory] = useState(null);
 
     useEffect(() => {
@@ -18,11 +18,12 @@ const Home = () => {
 
     useEffect(() => {
         if (!currentCategory) {
-            setCurrentCategory(data[0]);
+            setCurrentCategory(dataItems[0]);
+            replaceData();
         }
-    }, [data])
+    }, [dataItems])
     const getProducts = async () => {
-        productApi().then(e => setData(e?.data?.data?.getHomeData));
+        productApi().then(e => setDataItems(e?.data?.data?.getHomeData));
     }
     const socketHandler = () => {
         const socketData = SocketApi();
@@ -30,12 +31,40 @@ const Home = () => {
         socketData.on('messageFromServer', data => {
             console.log('message from server data', data);
         });
-        socketData.on('priceVariation', data => {
-            console.log('priceVariation data', data);
+        socketData.on('priceVariation', newSubCategory => {
+            replaceData(newSubCategory);
+            console.log('priceVariation data', newSubCategory);
         });
         return socketData;
     }
+    const socketItem = {
+        basePrice: 629,
+        branchId: "57d10fb2aa535cec381b23ab",
+        category: "586fae33392aa69055507ddd",
+        currentPrice: 629,
+        currentStock: 39,
+        highPrice: 642,
+        lowPrice: 599,
+        priceIncrease: 1,
+        stockId: "61bdc8b49038ff001733f863",
+        subCategory: "58ad3854c91a5a141789cc18",
+        toggle: 13
+    }
+
+    const replaceData = ( updatedSubCategoryData = socketItem ) => {
+        const CategoryList = [...dataItems];
+        for (let i=0; i < CategoryList?.length; i++) {
+            const category = CategoryList[i];
+            const dataDetail = category?.subCategory.find(item => item.subCategoryId == updatedSubCategoryData?.subCategory);
+            const findIndex = category?.subCategory.indexOf(dataDetail);
+            if(findIndex > -1 ){
+                category?.subCategory.splice(findIndex, 1 , updatedSubCategoryData);
+                break;
+            }
+        }
+    }
     return (
+
         <Container fluid className="p-0 bg-darks">
             <div className="pb-4">
                 <ProductSlider collectedData={currentCategory?.subCategory} />
@@ -44,7 +73,7 @@ const Home = () => {
                 <ProductDetail />
             </div>
             <div className="px-5 py-4">
-                <ProductTable data={data} setCurrentCategory={setCurrentCategory} />
+                <ProductTable dataItems={dataItems} setCurrentCategory={setCurrentCategory} />
             </div>
             <div>
                 <Footer />
