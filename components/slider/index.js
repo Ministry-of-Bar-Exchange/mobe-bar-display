@@ -9,6 +9,7 @@ const ProductSlider = ({ collectedData }) => {
         infinite: true,
         speed: 3500,
         arrows: false,
+        // rtl: true,
         autoplay: true,
         autoplaySpeed: 0,
         slidesToShow: 5,
@@ -45,7 +46,7 @@ const ProductSlider = ({ collectedData }) => {
                             </Col>
                         </div>
                     )
-                })}
+                })} 
             </Slider>
         </div>
     );
