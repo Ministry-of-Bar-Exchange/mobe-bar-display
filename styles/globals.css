@@ -139,9 +139,9 @@ a {
 }
 
 .productPrices {
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
+  width: 52px;
+  height: 50px;
   padding: 10px;
   background: #3d4341;
   display: flex;
@@ -213,7 +213,7 @@ a {
 }
 
 .drinkBottle img {
-  width: 145px !important;
+  min-width: 145px !important;
 }
 
 /* table */
@@ -286,7 +286,11 @@ table {
   padding: 0px;
 }
 
-.table h6,
+.table h6{
+  text-align: center !important;
+  width: 20% !important;
+  margin: 0 !important;
+}
 .tableBody {
   padding: 0px 25px !important;
   text-align: center !important;
@@ -371,7 +375,7 @@ table {
   .table td .font-medium,
   .borderTabledata,
   .tableBody,
-  .price {
+  .price,.table h6, .tableHeader p{
     font-size: 45px;
   }
 
@@ -423,7 +427,7 @@ table {
   .table td .font-medium,
   .borderTabledata,
   .tableBody,
-  .price {
+  .price, .table h6{
     font-size: 30px;
   }
 

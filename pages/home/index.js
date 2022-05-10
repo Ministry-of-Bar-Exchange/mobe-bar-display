@@ -27,7 +27,6 @@ const Home = () => {
     }
     const socketHandler = () => {
         const socketData = SocketApi();
-        socketData.on('connect', () => console.debug('socket connected'))
         socketData.on('messageFromServer', data => {
             console.log('message from server data', data);
         });
@@ -51,20 +50,19 @@ const Home = () => {
         toggle: 13
     }
 
-    const replaceData = ( updatedSubCategoryData = socketItem ) => {
+    const replaceData = (updatedSubCategoryData = socketItem) => {
         const CategoryList = [...dataItems];
-        for (let i=0; i < CategoryList?.length; i++) {
+        for (let i = 0; i < CategoryList?.length; i++) {
             const category = CategoryList[i];
             const dataDetail = category?.subCategory.find(item => item.subCategoryId == updatedSubCategoryData?.subCategory);
             const findIndex = category?.subCategory.indexOf(dataDetail);
-            if(findIndex > -1 ){
-                category?.subCategory.splice(findIndex, 1 , updatedSubCategoryData);
+            if (findIndex > -1) {
+                category?.subCategory.splice(findIndex, 1, updatedSubCategoryData);
                 break;
             }
         }
     }
     return (
-
         <Container fluid className="p-0 bg-darks">
             <div className="pb-4">
                 <ProductSlider collectedData={currentCategory?.subCategory} />
