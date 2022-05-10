@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'reactstrap';
 
 const Footer = () => {
+    const [date, setDate] = useState(new Date());
+    const [time,setTime] = useState(null)
+    let dates = date?.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+    });
+    useEffect(() => {
+        var timer = setInterval(() => setDate(new Date()), 1000)
+        return function cleanup() {
+            clearInterval(timer)
+        }
+    }, [])
+    useEffect(()=>{
+        setTime(date?.toLocaleTimeString())
+    },[date])
     return (
         <div className="d-flex justify-content-center align-items-center footer">
             <Col md="12" className="p-2">
@@ -23,8 +39,8 @@ const Footer = () => {
                     </Col>
                     <Col lg="2">
                         <div className="text-whites">
-                            <p className="m-0 font-medium">19 April 2022</p>
-                            <p className="m-0 font-medium">05:44:39 PM</p>
+                            <p className="m-0 font-medium">{dates}</p>
+                            <p className="m-0 font-medium">{`${time}`}</p>
                         </div>
                     </Col>
                 </Row>

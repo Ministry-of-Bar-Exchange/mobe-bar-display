@@ -17,7 +17,7 @@ const ProductSavings = () => {
                                 upto
                             </span>
                         </p>
-                        <div className="font-lg font-bolder font-bold text-gray text-uppercase mb-0 d-flex flex-column align-items-end pt-1 handIconWrapper">
+                        <div className="font-lg font-bolder font-bold text-gray text-uppercase mb-0 d-flex flex-column align-items-end pt-3 handIconWrapper">
                             <HiCurrencyRupee />
                             <FaHandHolding className="handIcon font-xl" />
                         </div>
