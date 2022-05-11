@@ -27,13 +27,13 @@ const ProductSlider = ({ collectedData }) => {
                                 <Row className="m-0">
                                     <Col>
                                         <div className="productBox">
-                                            {item?.highPrice < item?.currentPrice ?
+                                            {item.socketUpdatedPrice  ?
                                                 <HiArrowSmDown className="red font-xl" />
                                                 :
                                                 <HiArrowSmUp className="green font-xl" />
                                             }
                                             <div className="productPrices">
-                                                <span className={item.highPrice < item.currentPrice ? "red" : "green"}>
+                                                <span className={item.socketUpdatedPrice ? "red" : "green"}>
                                                     {item?.currentPrice}
                                                 </span>
                                             </div>

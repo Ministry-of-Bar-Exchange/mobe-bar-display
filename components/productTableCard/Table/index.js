@@ -28,7 +28,7 @@ const Table = ({ subCategoryList = [] }) => {
                 <Slider {...settings} >
                 {subCategoryList.map((items) => {
                     return (
-                        <div key={items?.subCategoryId} className={`${items?.highPrice === items?.currentPrice ? "bg-green" : "bg-lightred"} d-flex tabledata align-items-center`}>
+                        <div key={items?.subCategoryId} className={`${items.socketUpdatedPrice ? "bg-lightred" : "bg-green"} d-flex tabledata align-items-center`}>
                             <div className="text-uppercase text-whites font-medium font-bold tableBody">
                                 <p>{items?.subCategoryName}</p>
                             </div>
@@ -40,16 +40,17 @@ const Table = ({ subCategoryList = [] }) => {
                                 <BsChevronDown className="red font-md w-100" />
                                 {items?.lowPrice}
                             </div>
-                            <div className={`${items?.highPrice === items?.currentPrice ? "bg-darkgreen" : "bg-darkred"} d-flex justify-content-center tableBody`}>
+                            <div className={`${items.socketUpdatedPrice ? "bg-darkred" : "bg-darkgreen"} d-flex justify-content-center tableBody`}>
                                 <div className="d-flex align-items-center justify-content-center">
-                                    {items?.highPrice === items?.currentPrice ?
+                                    {items.socketUpdatedPrice ?
                                         <div className="priceIcons">
-                                            <HiArrowSmUp className="green font-xl" />
+                                            <HiArrowSmDown className="red font-xl" />
                                         </div>
                                         :
                                         <div className="priceIcons">
-                                            <HiArrowSmDown className="red font-xl" />
-                                        </div>}
+                                            <HiArrowSmUp className="green font-xl" />
+                                        </div>
+                                        }
                                     <p className="text-uppercase text-whites font-medium font-bold m-0 price">
                                         {items?.currentPrice}
                                     </p>

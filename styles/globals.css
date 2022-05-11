@@ -84,6 +84,10 @@ a {
   font-size: 20px;
 }
 
+.font-mid{
+  font-size: 28px;
+}
+
 .font-lg {
   font-size: 40px;
 }
@@ -127,14 +131,14 @@ a {
 }
 
 .productBox svg {
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .productName {
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  /* text-align: center; */
+  text-align: center;
   margin: 0;
 }
 
@@ -286,11 +290,12 @@ table {
   padding: 0px;
 }
 
-.table h6{
+.table h6 {
   text-align: center !important;
   width: 20% !important;
   margin: 0 !important;
 }
+
 .tableBody {
   padding: 0px 25px !important;
   text-align: center !important;
@@ -334,12 +339,15 @@ table {
 }
 
 .footerImg {
-  width: 40px;
+  width: 45px;
   margin: auto;
 }
 
 .slick-track {
   height: unset !important;
+}
+.time {
+  margin-top: -10px;
 }
 
 @media only screen and (min-width:2180px) and (max-width:3400px) {
@@ -369,18 +377,20 @@ table {
 
   .productTitle {
     font-size: 45px;
-  } 
+  }
 
   .table th,
   .table td .font-medium,
   .borderTabledata,
   .tableBody,
-  .price,.table h6, .tableHeader p{
+  .price,
+  .table h6,
+  .tableHeader p {
     font-size: 45px;
   }
 
   .tableBody svg {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .footer .font-medium {
@@ -427,7 +437,8 @@ table {
   .table td .font-medium,
   .borderTabledata,
   .tableBody,
-  .price, .table h6{
+  .price,
+  .table h6 {
     font-size: 30px;
   }
 

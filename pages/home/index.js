@@ -36,28 +36,24 @@ const Home = () => {
         });
         return socketData;
     }
-    const socketItem = {
-        basePrice: 629,
-        branchId: "57d10fb2aa535cec381b23ab",
-        category: "586fae33392aa69055507ddd",
-        currentPrice: 629,
-        currentStock: 39,
-        highPrice: 642,
-        lowPrice: 599,
-        priceIncrease: 1,
-        stockId: "61bdc8b49038ff001733f863",
-        subCategory: "58ad3854c91a5a141789cc18",
-        toggle: 13
-    }
 
-    const replaceData = (updatedSubCategoryData = socketItem) => {
+    const replaceData = (updatedSubCategoryData) => {
         const CategoryList = [...dataItems];
+        const updatedSocketData = { ...updatedSubCategoryData }
         for (let i = 0; i < CategoryList?.length; i++) {
             const category = CategoryList[i];
-            const dataDetail = category?.subCategory.find(item => item.subCategoryId == updatedSubCategoryData?.subCategory);
+            const dataDetail = category?.subCategory.find(item => item.subCategoryId == updatedSocketData?.subCategory);
             const findIndex = category?.subCategory.indexOf(dataDetail);
+            if (dataDetail?.highPrice < updatedSocketData?.highPrice) {
+                updatedSocketData.socketUpdatedPrice = true;
+            }
+            if (dataDetail?.currentPrice < updatedSocketData?.currentPrice) {
+                updatedSocketData.socketUpdatedPrice = true;
+            }
             if (findIndex > -1) {
-                category?.subCategory.splice(findIndex, 1, updatedSubCategoryData);
+                category?.subCategory.splice(findIndex, 1, updatedSocketData);
+                CategoryList?.splice( i , 1, category);
+                setDataItems(CategoryList);
                 break;
             }
         }
