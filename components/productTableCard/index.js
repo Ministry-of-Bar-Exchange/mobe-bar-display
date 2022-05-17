@@ -7,7 +7,7 @@ const ProductTable = ({dataItems, setCurrentCategory }) => {
         dots: false,
         fade: true,
         infinite: false,
-        speed: 2500,
+        speed: 3500,
         arrows: false,
         autoplay: true,
         slidesToShow: 1,
@@ -35,7 +35,7 @@ const ProductTable = ({dataItems, setCurrentCategory }) => {
             <Slider {...settings}>
                 {dataItems?.map((item) => {
                     return (
-                        <div key={item.subCategoryId} className="borders bg-lightgrey my-5">
+                        <div key={item.subCategoryId} className="borders bg-lightgrey mb-2">
                             <div className="p-3 d-flex align-items-center tableHeader">
                                 <div className="productImage">
                                     <img src={'/static/images/beer-bottle.png'}

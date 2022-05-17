@@ -20,6 +20,10 @@ a {
   color: #e1e1e1;
 }
 
+.full-height {
+  height: 100vh;
+}
+
 .bg-darks {
   background-color: #111111 !important;
 }
@@ -84,7 +88,7 @@ a {
   font-size: 20px;
 }
 
-.font-mid{
+.font-mid {
   font-size: 28px;
 }
 
@@ -126,7 +130,7 @@ a {
 .productBox {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0px 10px;
 }
 
@@ -144,14 +148,13 @@ a {
 
 .productPrices {
   border-radius: 50%;
-  width: 52px;
-  height: 50px;
+  width: 70px;
+  height: 65px;
   padding: 10px;
   background: #3d4341;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
 }
 
 .productPrices span {
@@ -227,8 +230,8 @@ a {
 }
 
 .productImage {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: #3d4341;
   display: flex;
@@ -346,6 +349,7 @@ table {
 .slick-track {
   height: unset !important;
 }
+
 .time {
   margin-top: -10px;
 }

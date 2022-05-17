@@ -20,7 +20,7 @@ const Footer = () => {
     },[date])
     return (
         <div className="d-flex justify-content-center align-items-center footer">
-            <Col md="12" className="p-2">
+            <Col md="12" className="px-2">
                 <Row className='m-0 justify-content-center'>
                     <Col lg="2">
                         <a className="footerImg">

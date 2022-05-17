@@ -19,7 +19,7 @@ const ProductSlider = ({ collectedData }) => {
 
     return (
         <div>
-            <Slider {...settings} className="bg-grey pt-3 pb-2 slider">
+            <Slider {...settings} className="bg-grey py-2 slider">
                 {collectedData?.map((item) => {
                     return (
                         <div key={item?.subCategoryId}>
@@ -27,26 +27,28 @@ const ProductSlider = ({ collectedData }) => {
                                 <Row className="m-0">
                                     <Col>
                                         <div className="productBox">
-                                            {item.socketUpdatedPrice  ?
-                                                <HiArrowSmDown className="red font-xl" />
-                                                :
-                                                <HiArrowSmUp className="green font-xl" />
-                                            }
-                                            <div className="productPrices">
-                                                <span className={item.socketUpdatedPrice ? "red" : "green"}>
-                                                    {item?.currentPrice}
-                                                </span>
-                                            </div>
                                             <p className="productName text-uppercase text-whites">
                                                 {item?.subCategoryName}
                                             </p>
+                                            <div className="d-flex align-items-center">
+                                                <div className="productPrices">
+                                                    <span className={item.socketUpdatedPrice ? "red" : "green"}>
+                                                    ₹ {item?.currentPrice}
+                                                    </span>
+                                                </div>
+                                                {item.socketUpdatedPrice ?
+                                                    <HiArrowSmDown className="red font-xl" />
+                                                    :
+                                                    <HiArrowSmUp className="green font-xl" />
+                                                }
+                                            </div>
                                         </div>
                                     </Col>
                                 </Row>
                             </Col>
                         </div>
                     )
-                })} 
+                })}
             </Slider>
         </div>
     );

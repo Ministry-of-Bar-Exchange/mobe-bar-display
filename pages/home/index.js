@@ -36,8 +36,22 @@ const Home = () => {
         });
         return socketData;
     }
-
-    const replaceData = (updatedSubCategoryData) => {
+    const socketItem = {
+        basePrice: 1198,
+        branchId: "57d10fb2aa535cec381b23ab",
+        category: "586fae33392aa69055507ddd",
+        currentPrice: 1198,
+        currentStock: 20,
+        highPrice: 1222,
+        lowPrice: 599,
+        priceIncrease: 1,
+        stockDate: "2021-12-18T11:40:36.963Z",
+        stockId: "61bdc8b49038ff001733f863",
+        subCategory: "58ad3854c91a5a141789cc18",
+        toggle: 24,
+        socketUpdatedPrice: true
+    }
+    const replaceData = (updatedSubCategoryData = socketItem) => {
         const CategoryList = [...dataItems];
         const updatedSocketData = { ...updatedSubCategoryData }
         for (let i = 0; i < CategoryList?.length; i++) {
@@ -59,14 +73,14 @@ const Home = () => {
         }
     }
     return (
-        <Container fluid className="p-0 bg-darks">
+        <Container fluid className="p-0 bg-darks full-height">
             <div className="pb-4">
                 <ProductSlider collectedData={currentCategory?.subCategory} />
             </div>
-            <div className="px-5 py-3 bg-lightgrey">
+            {/* <div className="px-5 py-3 bg-lightgrey">
                 <ProductDetail />
-            </div>
-            <div className="px-5 py-4">
+            </div> */}
+            <div className="px-5 pb-4">
                 <ProductTable dataItems={dataItems} setCurrentCategory={setCurrentCategory} />
             </div>
             <div>
