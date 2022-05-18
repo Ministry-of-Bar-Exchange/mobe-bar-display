@@ -8,6 +8,7 @@ const ProductTable = ({dataItems, setCurrentCategory }) => {
         fade: true,
         infinite: false,
         speed: 3500,
+        autoplaySpeed: 6000,
         arrows: false,
         autoplay: true,
         slidesToShow: 1,

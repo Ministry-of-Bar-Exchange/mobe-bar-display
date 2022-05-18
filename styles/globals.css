@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 a {
@@ -45,7 +44,7 @@ a {
 }
 
 .bg-darkgreen {
-  background-color: #20724c !important;
+  background-color: #187248 !important;
 }
 
 .bg-darker {
@@ -130,7 +129,7 @@ a {
 .productBox {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0px 10px;
 }
 
@@ -147,18 +146,19 @@ a {
 }
 
 .productPrices {
-  border-radius: 50%;
+  /* border-radius: 50%;
   width: 70px;
   height: 65px;
   padding: 10px;
-  background: #3d4341;
+  background: #3d4341; */
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
 }
 
 .productPrices span {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 600;
 }
 
