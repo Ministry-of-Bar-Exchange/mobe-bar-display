@@ -128,7 +128,7 @@ a {
 
 .productBox {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   padding: 0px 10px;
 }
@@ -143,6 +143,7 @@ a {
   line-height: 26px;
   text-align: center;
   margin: 0;
+  width: 60%;
 }
 
 .productPrices {
@@ -152,9 +153,9 @@ a {
   padding: 10px;
   background: #3d4341; */
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
+  width: 40%;
 }
 
 .productPrices span {

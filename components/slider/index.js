@@ -26,21 +26,19 @@ const ProductSlider = ({ collectedData }) => {
                             <Col md="12" lg="12">
                                 <Row className="m-0">
                                     <Col>
-                                        <div className="productBox">
-                                            <p className="productName text-uppercase text-whites">
-                                                {item?.subCategoryName}
-                                            </p>
-                                            <div className="d-flex align-items-center">
-                                                <div className="productPrices">
-                                                    <span className={item.socketUpdatedPrice ? "red" : "green"}>
+                                        <div className="productBox w-full">
+                                            <div className="productName">
+                                                <p className="m-0  text-uppercase text-whites">{item?.subCategoryName}</p>
+                                            </div>
+                                            <div className=" productPrices ">
+                                                    <span className={`${item.socketUpdatedPrice ? "red" : "green"} flex align-items-center`}>
                                                     ₹ {item?.currentPrice}
                                                     </span>
-                                                </div>
                                                 {item.socketUpdatedPrice ?
                                                     <HiArrowSmDown className="red font-xl" />
                                                     :
                                                     <HiArrowSmUp className="green font-xl" />
-                                                }
+                                                }     
                                             </div>
                                         </div>
                                     </Col>
