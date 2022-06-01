@@ -39,8 +39,8 @@ const Footer = () => {
                     </Col>
                     <Col lg="2">
                         <div className="text-whites">
-                            <p className="m-0 font-lg">{dates}</p>
-                            <p className="font-lg time">{`${time}`}</p>
+                            <p className="m-0 font-lg font-med">{dates}</p>
+                            <p className="font-lg time font-med">{`${time}`}</p>
                         </div>
                     </Col>
                 </Row>

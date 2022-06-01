@@ -1,8 +1,7 @@
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Helvetica" !important;
 }
 
 a {
@@ -13,6 +12,31 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/static/fonts/Helvetica-Font/Helvetica-Neue-UltraLight.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/static/fonts/Helvetica-Font/bryant-medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/static/fonts/Helvetica-Font/Helvetica.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/static/fonts/Helvetica-Font/bryant-bold.ttf");
+  font-weight: 700;
+}
+
 
 /* colors*/
 .text-whites {
@@ -65,6 +89,10 @@ a {
 
 .text-orange {
   color: #fd810a;
+}
+
+.font-med {
+  font-weight: 500;
 }
 
 .font-bold {
@@ -138,12 +166,13 @@ a {
 }
 
 .productName {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 23px;
+  font-weight: 500;
   line-height: 26px;
   text-align: center;
   margin: 0;
   width: 60%;
+
 }
 
 .productPrices {
@@ -160,7 +189,7 @@ a {
 
 .productPrices span {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* product detail slider css */
@@ -305,6 +334,7 @@ table {
   text-align: center !important;
   width: 20% !important;
   margin: 0 !important;
+  font-family: sans-serif !important;
 }
 
 .table p {
@@ -405,6 +435,9 @@ table {
   .footerImg {
     width: 70px;
   }
+  .productName{
+    font-size: 30px;
+  }
 }
 
 @media only screen and (min-width:1800px) and (max-width:2100px) {
@@ -442,9 +475,10 @@ table {
   .table td .font-medium,
   .borderTabledata,
   .tableBody,
-  .price,
-  .table h6 {
-    font-size: 30px;
+  .price {
+    font-size: 32px;
   }
-
+  .table h6 {
+    font-size: 35px;
+  }
 }
